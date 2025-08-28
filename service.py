@@ -18,3 +18,9 @@ def return_vehicle_by_VIN(VIN: str):
     vehicle = session.query(VehicleDB).filter(VehicleDB.VIN == VIN).first()
     session.close()
     return vehicle
+
+def return_all_vehicles_from_db():
+    session = Session()
+    vehicles = session.query(VehicleDB).all()
+    session.close()
+    return vehicles
