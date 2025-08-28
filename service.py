@@ -12,3 +12,9 @@ def add_new_vehicle_to_db(vehicle: VehicleDB):
     session.add(new_vehicle)
     session.commit()
     session.close()
+
+def return_vehicle_by_VIN(VIN: str):
+    session =Session()
+    vehicle = session.query(VehicleDB).filter(VehicleDB.VIN == VIN).first()
+    session.close()
+    return vehicle

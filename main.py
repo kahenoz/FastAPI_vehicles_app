@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from service import add_new_vehicle_to_db
+from service import add_new_vehicle_to_db, return_vehicle_by_VIN
 from model import VehicleDB
 
 app = FastAPI()
@@ -12,3 +12,8 @@ def add_vehicle(brand: str, gate_id: int, VIN: str):
     except Exception as e:
         return f"Failed to add vehicle"
     return f"Successfully added vehicle {brand} with VIN {VIN} at gate {gate_id}"
+
+@app.get("/vehicle_by_VIN")
+def get_vehicle_by_VIN(VIN: str):
+    vehicle = return_vehicle_by_VIN(VIN)
+    return {"data": vehicle}
