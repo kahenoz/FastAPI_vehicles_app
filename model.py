@@ -6,5 +6,5 @@ Base = declarative_base()
 class VehicleDB(Base):
     __tablename__ = 'vehicles'
     brand = Column(String, primary_key=True)
-    gate_id = Column(Integer)
+    id = Column(Integer)
     VIN = Column(String)

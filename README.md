@@ -20,6 +20,6 @@ This project demonstrates:
 - Using **FastAPI** for a simple API interface.
 
 ## Features
-- Add a new vehicle (brand, gate_id, VIN)
+- Add a new vehicle (brand, id, VIN)
 - Retrieve all vehicles
 - Retrieve a vehicle by its VIN
