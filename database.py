@@ -16,4 +16,5 @@ mydb = mysql.connector.connect(
     database=DATABASE
 )
 
-print("Database connection successful", mydb)
+mycursor = mydb.cursor()
+#print("Database connection successful", mydb)
